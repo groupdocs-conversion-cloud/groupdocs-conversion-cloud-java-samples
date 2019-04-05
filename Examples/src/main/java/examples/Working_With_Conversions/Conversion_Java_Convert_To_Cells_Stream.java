@@ -5,9 +5,9 @@ import com.groupdocs.cloud.conversion.client.ApiException;
 import com.groupdocs.cloud.conversion.model.*;
 import com.groupdocs.cloud.conversion.model.requests.*;
 import examples.Utils;
-import java.util.List;
+import java.io.File;
 
-public class Conversion_Java_Convert_To_Images {
+public class Conversion_Java_Convert_To_Cells_Stream {
 
 	public static void main(String[] args) {
 
@@ -18,7 +18,7 @@ public class Conversion_Java_Convert_To_Images {
 
 			settings.setStorageName(Utils.MYStorage);
 			settings.setFilePath("conversions\\password-protected.docx");
-			settings.setFormat("jpeg");
+			settings.setFormat("xlsx");
 
 			DocxLoadOptions loadOptions = new DocxLoadOptions();
 			loadOptions.setPassword("password");
@@ -27,22 +27,20 @@ public class Conversion_Java_Convert_To_Images {
 
 			settings.setLoadOptions(loadOptions);
 
-			JpegConvertOptions convertOptions = new JpegConvertOptions();
+			XlsxConvertOptions convertOptions = new XlsxConvertOptions();
 			convertOptions.setFromPage(1);
 			convertOptions.setPagesCount(2);
 			convertOptions.setFromPage(1);
-			convertOptions.setGrayscale(false);
-			convertOptions.setHeight(1024);
-			convertOptions.setQuality(100);
-			convertOptions.setRotateAngle(90);
-			convertOptions.setUsePdf(false);
+			convertOptions.setPassword("password");
+			convertOptions.setUsePdf(true);
 			settings.setConvertOptions(convertOptions);
 
-			settings.setOutputPath("converted\\tojpeg");
+			// set OutputPath as empty will result the output as document IOStream
+			settings.setOutputPath("");
 
 			// convert to specified format
-			List<StoredConvertedResult> response = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
-			System.out.println("Document converted successfully: " + response.size());
+			File response = apiInstance.convertDocumentDownload(new ConvertDocumentRequest(settings));
+			System.out.println("Document converted successfully: " + response);
 		} catch (ApiException e) {
 			System.err.println("Exception while calling ConversionApi:");
 			e.printStackTrace();

@@ -15,7 +15,7 @@ public class Conversion_Java_Get_Supported_Formats_For_Extension {
 
 		ConversionApi apiInstance = new ConversionApi(Utils.AppSID, Utils.AppKey);
 		try {
-			GetSupportedConversionTypesRequest request = new GetSupportedConversionTypesRequest(null, null, "xlsx");
+			GetSupportedConversionTypesRequest request = new GetSupportedConversionTypesRequest("", Utils.MYStorage, "xlsx");
 			List<SupportedFormat> response = apiInstance.getSupportedConversionTypes(request);
 
 			for (SupportedFormat entry : response) {

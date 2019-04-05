@@ -5,9 +5,9 @@ import com.groupdocs.cloud.conversion.client.ApiException;
 import com.groupdocs.cloud.conversion.model.*;
 import com.groupdocs.cloud.conversion.model.requests.*;
 import examples.Utils;
-import java.util.List;
+import java.io.File;
 
-public class Conversion_Java_Convert_To_Any_Format {
+public class Conversion_Java_Convert_To_Any_Format_Stream {
 
 	public static void main(String[] args) {
 
@@ -32,12 +32,11 @@ public class Conversion_Java_Convert_To_Any_Format {
 		convertOptions.setUsePdf(true);
 		settings.setConvertOptions(convertOptions);
 
-		settings.setOutputPath("converted\\tocells");
+		// set OutputPath as empty will result the output as document IOStream
+		settings.setOutputPath("");
 
 		// convert to any format
 		convertToAnyFormat(settings);
-
-		Utils.getFolderFilesPath("converted\\tocells");
 	}
 
 	static void convertToAnyFormat(ConvertSettings convertSettings) {
@@ -45,8 +44,8 @@ public class Conversion_Java_Convert_To_Any_Format {
 		try {
 
 			// convert to specified format
-			List<StoredConvertedResult> response = apiInstance.convertDocument(new ConvertDocumentRequest(convertSettings));
-			System.out.println("Document converted successfully: " + response.size());
+			File response = apiInstance.convertDocumentDownload(new ConvertDocumentRequest(convertSettings));
+			System.out.println("Document converted successfully: " + response);
 		} catch (ApiException e) {
 			System.err.println("Exception while calling ConversionApi:");
 			e.printStackTrace();

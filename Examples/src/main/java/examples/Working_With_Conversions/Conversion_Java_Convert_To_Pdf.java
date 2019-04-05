@@ -15,7 +15,7 @@ public class Conversion_Java_Convert_To_Pdf {
 
 			ConvertSettings settings = new ConvertSettings();
 
-			settings.setStorage(Utils.MYStorage);
+			settings.setStorageName(Utils.MYStorage);
 			settings.setFilePath("conversions\\password-protected.docx");
 			settings.setFormat("pdf");
 

@@ -5,6 +5,7 @@ import com.groupdocs.cloud.conversion.client.ApiException;
 import com.groupdocs.cloud.conversion.model.*;
 import com.groupdocs.cloud.conversion.model.requests.*;
 import examples.Utils;
+import java.util.List;
 
 public class Conversion_Java_Convert_To_Slides {
 
@@ -15,7 +16,7 @@ public class Conversion_Java_Convert_To_Slides {
 
 			ConvertSettings settings = new ConvertSettings();
 
-			settings.setStorage(Utils.MYStorage);
+			settings.setStorageName(Utils.MYStorage);
 			settings.setFilePath("conversions\\sample.docx");
 			settings.setFormat("pptx");
 
@@ -35,10 +36,8 @@ public class Conversion_Java_Convert_To_Slides {
 			settings.setOutputPath("converted\\toslides");
 
 			// convert to specified format
-			apiInstance.convertDocument(new ConvertDocumentRequest(settings));
-			System.out.println("Document conveted successfully.");
-
-			Utils.getFolderFilesPath("converted\\toslides");
+			List<StoredConvertedResult> response = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
+			System.out.println("Document converted successfully: " + response.size());
 		} catch (ApiException e) {
 			System.err.println("Exception while calling ConversionApi:");
 			e.printStackTrace();
