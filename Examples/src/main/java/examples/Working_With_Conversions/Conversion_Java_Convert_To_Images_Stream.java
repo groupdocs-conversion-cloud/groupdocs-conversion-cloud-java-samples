@@ -5,9 +5,9 @@ import com.groupdocs.cloud.conversion.client.ApiException;
 import com.groupdocs.cloud.conversion.model.*;
 import com.groupdocs.cloud.conversion.model.requests.*;
 import examples.Utils;
-import java.util.List;
+import java.io.File;
 
-public class Conversion_Java_Convert_To_Images {
+public class Conversion_Java_Convert_To_Images_Stream {
 
 	public static void main(String[] args) {
 
@@ -38,11 +38,12 @@ public class Conversion_Java_Convert_To_Images {
 			convertOptions.setUsePdf(false);
 			settings.setConvertOptions(convertOptions);
 
-			settings.setOutputPath("converted\\tojpeg");
+			// set OutputPath as empty will result the output as document IOStream
+			settings.setOutputPath("");
 
 			// convert to specified format
-			List<StoredConvertedResult> response = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
-			System.out.println("Document converted successfully: " + response.size());
+			File response = apiInstance.convertDocumentDownload(new ConvertDocumentRequest(settings));
+			System.out.println("Document converted successfully: " + response);
 		} catch (ApiException e) {
 			System.err.println("Exception while calling ConversionApi:");
 			e.printStackTrace();

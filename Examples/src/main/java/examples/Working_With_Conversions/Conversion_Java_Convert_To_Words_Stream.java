@@ -5,9 +5,9 @@ import com.groupdocs.cloud.conversion.client.ApiException;
 import com.groupdocs.cloud.conversion.model.*;
 import com.groupdocs.cloud.conversion.model.requests.*;
 import examples.Utils;
-import java.util.List;
+import java.io.File;
 
-public class Conversion_Java_Convert_To_Images {
+public class Conversion_Java_Convert_To_Words_Stream {
 
 	public static void main(String[] args) {
 
@@ -17,32 +17,30 @@ public class Conversion_Java_Convert_To_Images {
 			ConvertSettings settings = new ConvertSettings();
 
 			settings.setStorageName(Utils.MYStorage);
-			settings.setFilePath("conversions\\password-protected.docx");
-			settings.setFormat("jpeg");
+			settings.setFilePath("converted\\\\topdf\\password-protected.pdf");
+			settings.setFormat("docx");
 
-			DocxLoadOptions loadOptions = new DocxLoadOptions();
+			PdfLoadOptions loadOptions = new PdfLoadOptions();
 			loadOptions.setPassword("password");
-			loadOptions.setHideWordTrackedChanges(true);
-			loadOptions.setDefaultFont("Arial");
+			loadOptions.setHidePdfAnnotations(true);
+			loadOptions.setRemoveEmbeddedFiles(false);
+			loadOptions.setFlattenAllFields(true);
 
 			settings.setLoadOptions(loadOptions);
 
-			JpegConvertOptions convertOptions = new JpegConvertOptions();
+			DocxConvertOptions convertOptions = new DocxConvertOptions();
 			convertOptions.setFromPage(1);
 			convertOptions.setPagesCount(2);
-			convertOptions.setFromPage(1);
-			convertOptions.setGrayscale(false);
-			convertOptions.setHeight(1024);
-			convertOptions.setQuality(100);
-			convertOptions.setRotateAngle(90);
-			convertOptions.setUsePdf(false);
+			convertOptions.setZoom(100);
+			convertOptions.setDpi(300.0);
 			settings.setConvertOptions(convertOptions);
 
-			settings.setOutputPath("converted\\tojpeg");
+			// set OutputPath as empty will result the output as document IOStream
+			settings.setOutputPath("");
 
 			// convert to specified format
-			List<StoredConvertedResult> response = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
-			System.out.println("Document converted successfully: " + response.size());
+			File response = apiInstance.convertDocumentDownload(new ConvertDocumentRequest(settings));
+			System.out.println("Document converted successfully: " + response);
 		} catch (ApiException e) {
 			System.err.println("Exception while calling ConversionApi:");
 			e.printStackTrace();

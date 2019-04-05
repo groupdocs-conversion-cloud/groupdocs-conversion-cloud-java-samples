@@ -14,7 +14,7 @@ public class Conversion_Java_Get_Supported_Formats_For_Document {
 		ConversionApi apiInstance = new ConversionApi(Utils.AppSID, Utils.AppKey);
 		try {
 			GetSupportedConversionTypesRequest request = new GetSupportedConversionTypesRequest(
-					"conversions/sample.docx", Utils.MYStorage, null);
+					"conversions/one-page.docx", Utils.MYStorage, "");
 			List<SupportedFormat> response = apiInstance.getSupportedConversionTypes(request);
 
 			for (SupportedFormat entry : response) {

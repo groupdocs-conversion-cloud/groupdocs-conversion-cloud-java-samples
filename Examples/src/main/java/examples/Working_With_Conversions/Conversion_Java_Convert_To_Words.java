@@ -5,6 +5,7 @@ import com.groupdocs.cloud.conversion.client.ApiException;
 import com.groupdocs.cloud.conversion.model.*;
 import com.groupdocs.cloud.conversion.model.requests.*;
 import examples.Utils;
+import java.util.List;
 
 public class Conversion_Java_Convert_To_Words {
 
@@ -15,12 +16,12 @@ public class Conversion_Java_Convert_To_Words {
 
 			ConvertSettings settings = new ConvertSettings();
 
-			settings.setStorage(Utils.MYStorage);
-			settings.setFilePath("conversions\\sample.pdf");
+			settings.setStorageName(Utils.MYStorage);
+			settings.setFilePath("converted\\\\topdf\\password-protected.pdf");
 			settings.setFormat("docx");
 
 			PdfLoadOptions loadOptions = new PdfLoadOptions();
-			loadOptions.setPassword("");
+			loadOptions.setPassword("password");
 			loadOptions.setHidePdfAnnotations(true);
 			loadOptions.setRemoveEmbeddedFiles(false);
 			loadOptions.setFlattenAllFields(true);
@@ -37,10 +38,8 @@ public class Conversion_Java_Convert_To_Words {
 			settings.setOutputPath("converted\\towords");
 
 			// convert to specified format
-			apiInstance.convertDocument(new ConvertDocumentRequest(settings));
-			System.out.println("Document conveted successfully.");
-
-			Utils.getFolderFilesPath("converted\\towords");
+			List<StoredConvertedResult> response = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
+			System.out.println("Document converted successfully: " + response.size());
 		} catch (ApiException e) {
 			System.err.println("Exception while calling ConversionApi:");
 			e.printStackTrace();

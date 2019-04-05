@@ -12,7 +12,7 @@ public class Utils {
 	// registration is required).
 
 	public static String AppSID = "XXXXX-XXXXX-XXXXX";
-	public static String AppKey = "XXXXXXX";
+	public static String AppKey = "XXXXXXXXXX";
 	public static String MYStorage = "XXXXX";
 
 	public static void getFolderFilesPath(String path) {
