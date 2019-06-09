@@ -11,17 +11,17 @@ public class Conversion_Java_Convert_To_Words {
 
 	public static void main(String[] args) {
 
-		ConversionApi apiInstance = new ConversionApi(Utils.AppSID, Utils.AppKey);
+		ConvertApi apiInstance = new ConvertApi(Utils.AppSID, Utils.AppKey);
 		try {
 
 			ConvertSettings settings = new ConvertSettings();
 
 			settings.setStorageName(Utils.MYStorage);
-			settings.setFilePath("converted\\\\topdf\\password-protected.pdf");
+			settings.setFilePath("conversions\\sample.pdf");
 			settings.setFormat("docx");
 
 			PdfLoadOptions loadOptions = new PdfLoadOptions();
-			loadOptions.setPassword("password");
+			loadOptions.setPassword("");
 			loadOptions.setHidePdfAnnotations(true);
 			loadOptions.setRemoveEmbeddedFiles(false);
 			loadOptions.setFlattenAllFields(true);
@@ -38,10 +38,10 @@ public class Conversion_Java_Convert_To_Words {
 			settings.setOutputPath("converted\\towords");
 
 			// convert to specified format
-			List<StoredConvertedResult> response = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
+			List<StoredConvertedResult> response = apiInstance.convertDocument(new ConvertDocumentRequest(convertSettings));
 			System.out.println("Document converted successfully: " + response.size());
 		} catch (ApiException e) {
-			System.err.println("Exception while calling ConversionApi:");
+			System.err.println("Exception while calling ConvertApi:");
 			e.printStackTrace();
 		}
 	}

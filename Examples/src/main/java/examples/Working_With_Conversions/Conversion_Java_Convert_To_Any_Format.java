@@ -41,14 +41,14 @@ public class Conversion_Java_Convert_To_Any_Format {
 	}
 
 	static void convertToAnyFormat(ConvertSettings convertSettings) {
-		ConversionApi apiInstance = new ConversionApi(Utils.AppSID, Utils.AppKey);
+		ConvertApi apiInstance = new ConvertApi(Utils.AppSID, Utils.AppKey);
 		try {
 
 			// convert to specified format
 			List<StoredConvertedResult> response = apiInstance.convertDocument(new ConvertDocumentRequest(convertSettings));
 			System.out.println("Document converted successfully: " + response.size());
 		} catch (ApiException e) {
-			System.err.println("Exception while calling ConversionApi:");
+			System.err.println("Exception while calling ConvertApi:");
 			e.printStackTrace();
 		}
 	}

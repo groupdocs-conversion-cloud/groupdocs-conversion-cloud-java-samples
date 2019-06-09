@@ -4,17 +4,17 @@ import com.groupdocs.cloud.conversion.client.*;
 import com.groupdocs.cloud.conversion.model.*;
 import com.groupdocs.cloud.conversion.model.requests.*;
 import java.util.List;
-import com.groupdocs.cloud.conversion.api.ConversionApi;
+import com.groupdocs.cloud.conversion.api.*;
 import examples.Utils;
 
 public class Conversion_Java_Get_Supported_Formats_For_Document {
 
 	public static void main(String[] args) {
 
-		ConversionApi apiInstance = new ConversionApi(Utils.AppSID, Utils.AppKey);
+		InfoApi apiInstance = new InfoApi(Utils.AppSID, Utils.AppKey);
 		try {
 			GetSupportedConversionTypesRequest request = new GetSupportedConversionTypesRequest(
-					"conversions/one-page.docx", Utils.MYStorage, "");
+					"conversions/sample.docx", Utils.MYStorage, null);
 			List<SupportedFormat> response = apiInstance.getSupportedConversionTypes(request);
 
 			for (SupportedFormat entry : response) {
@@ -23,7 +23,7 @@ public class Conversion_Java_Get_Supported_Formats_For_Document {
 				}
 			}
 		} catch (ApiException e) {
-			System.err.println("Exception while calling ConversionApi:");
+			System.err.println("Exception while calling InfoApi:");
 			e.printStackTrace();
 		}
 	}
