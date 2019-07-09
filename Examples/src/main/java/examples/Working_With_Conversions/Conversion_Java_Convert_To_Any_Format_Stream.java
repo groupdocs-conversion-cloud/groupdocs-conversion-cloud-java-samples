@@ -5,6 +5,8 @@ import com.groupdocs.cloud.conversion.client.ApiException;
 import com.groupdocs.cloud.conversion.model.*;
 import com.groupdocs.cloud.conversion.model.requests.*;
 import examples.Utils;
+
+import java.util.List;
 import java.util.stream.*;
 
 public class Conversion_Java_Convert_To_Any_Format_Stream {
@@ -33,7 +35,7 @@ public class Conversion_Java_Convert_To_Any_Format_Stream {
 		settings.setConvertOptions(convertOptions);
 
 		// set OutputPath as empty will result the output as document IOStream
-		settings.setOutputPath("");
+		settings.setOutputPath("conversions");
 
 		// convert to any format
 		convertToAnyFormat(settings);
@@ -44,7 +46,7 @@ public class Conversion_Java_Convert_To_Any_Format_Stream {
 		try {
 
 			// convert to specified format
-			Stream response = apiInstance.convertDocument(new ConvertDocumentRequest(convertSettings));
+			List<StoredConvertedResult> response = apiInstance.convertDocument(new ConvertDocumentRequest(convertSettings));
 			System.out.println("Document converted successfully: " + response);
 		} catch (ApiException e) {
 			System.err.println("Exception while calling ConvertApi:");
