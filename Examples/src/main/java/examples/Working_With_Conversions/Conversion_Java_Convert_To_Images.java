@@ -41,7 +41,7 @@ public class Conversion_Java_Convert_To_Images {
 			settings.setOutputPath("converted\\tojpeg");
 
 			// convert to specified format
-			List<StoredConvertedResult> response = apiInstance.convertDocument(new ConvertDocumentRequest(convertSettings));
+			List<StoredConvertedResult> response = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
 			System.out.println("Document converted successfully: " + response.size());
 		} catch (ApiException e) {
 			System.err.println("Exception while calling ConvertApi:");

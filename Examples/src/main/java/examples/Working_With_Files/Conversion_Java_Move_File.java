@@ -12,11 +12,11 @@ public class Conversion_Java_Move_File {
 		FileApi apiInstance = new FileApi(Utils.AppSID, Utils.AppKey);
 		try {
 
-			MoveFileRequest request = new MoveFileRequest("conversions\\one-page1.docx", "conversions1\\one-page1.docx",
+			MoveFileRequest request = new MoveFileRequest("conversions\\one-page.docx", "conversions1\\one-page1.docx",
 					Utils.MYStorage, Utils.MYStorage, null);
 			apiInstance.moveFile(request);
 			System.out.println(
-					"Expected response type is Void: 'conversions/one-page1.docx' file moved to 'conversions1/one-page1.docx'.");
+					"Expected response type is Void: 'conversions/one-page.docx' file moved to 'conversions1/one-page1.docx'.");
 		} catch (ApiException e) {
 			System.err.println("Exception while calling FileApi:");
 			e.printStackTrace();

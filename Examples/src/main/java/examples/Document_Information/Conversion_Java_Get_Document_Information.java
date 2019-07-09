@@ -1,4 +1,4 @@
-package examples.Supported_File_Formats;
+package examples.Document_Information;
 
 import com.groupdocs.cloud.conversion.client.*;
 import com.groupdocs.cloud.conversion.model.*;

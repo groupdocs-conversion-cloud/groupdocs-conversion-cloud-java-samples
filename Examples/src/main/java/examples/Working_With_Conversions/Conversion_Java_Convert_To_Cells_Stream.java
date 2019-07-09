@@ -5,6 +5,8 @@ import com.groupdocs.cloud.conversion.client.ApiException;
 import com.groupdocs.cloud.conversion.model.*;
 import com.groupdocs.cloud.conversion.model.requests.*;
 import examples.Utils;
+
+import java.io.File;
 import java.util.stream.*;
 
 public class Conversion_Java_Convert_To_Cells_Stream {
@@ -39,8 +41,8 @@ public class Conversion_Java_Convert_To_Cells_Stream {
 			settings.setOutputPath("");
 
 			// convert to specified format
-			Stream response = apiInstance.convertDocument(new ConvertDocumentRequest(convertSettings));
-			System.out.println("Document converted successfully: " + response);
+			File response = apiInstance.convertDocumentDownload(new ConvertDocumentRequest(settings));
+			System.out.println("Document converted successfully: " + response.length());
 		} catch (ApiException e) {
 			System.err.println("Exception while calling ConvertApi:");
 			e.printStackTrace();
