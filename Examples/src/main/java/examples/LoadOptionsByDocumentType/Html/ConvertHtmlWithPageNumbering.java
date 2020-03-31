@@ -1,4 +1,4 @@
-package examples.Convert;
+package examples.LoadOptionsByDocumentType.Html;
 
 import com.groupdocs.cloud.conversion.client.*;
 import com.groupdocs.cloud.conversion.model.*;
@@ -8,9 +8,9 @@ import examples.Constants;
 import java.util.List;
 
 /**
- * This example demonstrates how to convert word processing document into html document
+ * This example demonstrates how to convert html document into pdf document with page numbering
  */
-public class ConvertToHtml {
+public class ConvertHtmlWithPageNumbering {
 
 	public static void main(String[] args) {
 		try {
@@ -19,16 +19,13 @@ public class ConvertToHtml {
 
 			// Prepare convert settings
 			ConvertSettings settings = new ConvertSettings();
-			settings.setFilePath("WordProcessing/four-pages.docx");
-			settings.setFormat("html");
+			settings.setFilePath("Html/sample.html");
+			settings.setFormat("pdf");
 
-			HtmlConvertOptions convertOptions = new HtmlConvertOptions();
-			convertOptions.setFromPage(1);
-			convertOptions.setPagesCount(1);
-			convertOptions.setFixedLayout(true);
-			convertOptions.setFixedLayoutShowBorders(true);
+			HtmlLoadOptions loadOptions = new HtmlLoadOptions();
+			loadOptions.setPageNumbering(true);
 
-			settings.setConvertOptions(convertOptions);
+			settings.setLoadOptions(loadOptions);
 			settings.setOutputPath("converted");
 
 			List<StoredConvertedResult> result = apiInstance.convertDocument(new ConvertDocumentRequest(settings));

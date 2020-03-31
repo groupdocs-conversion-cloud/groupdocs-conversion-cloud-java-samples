@@ -6,6 +6,7 @@ import examples.Info.*;
 import examples.LoadOptionsByDocumentType.Cad.*;
 import examples.LoadOptionsByDocumentType.Csv.*;
 import examples.LoadOptionsByDocumentType.Email.*;
+import examples.LoadOptionsByDocumentType.Html.*;
 import examples.LoadOptionsByDocumentType.Note.*;
 import examples.LoadOptionsByDocumentType.Pdf.*;
 import examples.LoadOptionsByDocumentType.Presentation.*;
@@ -47,6 +48,10 @@ public class RunExamples {
 		ConvertEmailWithAlteringFieldsVisibility.main(args);
 		ConvertEmailWithAttachments.main(args);
 		ConvertEmailWithTimezoneOffset.main(args);
+		ConvertEmailWithFieldLabels.main(args);
+		ConvertEmailWithOriginalDate.main(args);
+
+		ConvertHtmlWithPageNumbering.main(args);
 
 		ConvertNoteBySpecifyingFontSubstitution.main(args);
 
