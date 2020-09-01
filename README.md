@@ -16,10 +16,4 @@ Directory | Description
 --------- | -----------
 [Examples](Examples)  | A collection of Java Cloud SDK examples that help you learn the product features
 
-## Resources
-
-+ **Website:** [www.groupdocs.cloud](http://www.groupdocs.cloud)
-+ **Product Home:** [GroupDocs.Conversion Cloud SDK for Java](https://products.groupdocs.cloud/conversion/java)
-+ **Documentation:** [GroupDocs.Conversion Cloud SDK Documentation](https://docs.groupdocs.cloud/display/conversioncloud/Home)
-+ **Free Support:** [GroupDocs.Conversion Cloud SDK Free Support Forum](https://forum.groupdocs.cloud/c/conversion)
-+ **Blog:** [GroupDocs.Conversion Cloud SDK Blog](https://blog.groupdocs.cloud/category/conversion)
+[Home](https://www.groupdocs.cloud/) | [Product Page](https://products.groupdocs.cloud/conversion/java) | [Docs](https://docs.groupdocs.cloud/conversion/) | [Demos](https://products.groupdocs.app/conversion/family) | [API Reference](https://apireference.groupdocs.cloud/conversion/) | [Source Code](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java) | [Blog](https://blog.groupdocs.cloud/category/conversion/) | [Free Support](https://forum.groupdocs.cloud/c/conversion) | [Free Trial](https://purchase.groupdocs.cloud/trial)
