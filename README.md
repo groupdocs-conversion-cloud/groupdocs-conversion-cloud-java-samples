@@ -1,19 +1,46 @@
-## GroupDocs.Conversion Cloud SDK for Java Examples
+# GroupDocs.Conversion Cloud SDK for Java Examples
 
-This repository contains [Examples](Examples) projects for [GroupDocs.Conversion Cloud SDK for Java](https://products.groupdocs.cloud/conversion/java) to help you learn and write your own applications.
+This repository contains [Examples](Examples) projects for [GroupDocs.Conversion Cloud SDK for Java](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java) to help you learn and write your own applications.
 
-[GroupDocs.Conversion Cloud SDK for Java](https://products.groupdocs.cloud/conversion/java) has been developed to help you get started with using our document conversion REST API, allowing to seamlessly convert your documents to any format you need. With this single API, you can convert back and forth between over 50 types of documents and images, including all Microsoft Office and OpenDocument file formats, PDF documents, HTML, CAD, raster images and many more.
-[GroupDocs.Conversion Cloud API](https://products.groupdocs.cloud/conversion). GroupDocs.Conversion Cloud SDK for Java has been developed to help you integrate all these features in your Java application without any hassle.
+[GroupDocs.Conversion Cloud SDK for Java](https://products.groupdocs.cloud/conversion/java) allows you to work with [GroupDocs.Conversion Cloud API](https://products.groupdocs.cloud/conversion) REST APIs in your Java applications.
 
 <p align="center">
-
-  <a title="Download complete GroupDocs.Conversion Cloud SDK Examples for Java source code" href="https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples/archive/master.zip">
+  <a title="Download complete GroupDocs.Conversion Cloud SDK Java Example source code" href="https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples/archive/master.zip">
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
 </p>
 
-Directory | Description
---------- | -----------
-[Examples](Examples)  | A collection of Java Cloud SDK examples that help you learn the product features
+## Prerequisites
 
-[Home](https://www.groupdocs.cloud/) | [Product Page](https://products.groupdocs.cloud/conversion/java) | [Docs](https://docs.groupdocs.cloud/conversion/) | [Demos](https://products.groupdocs.app/conversion/family) | [API Reference](https://apireference.groupdocs.cloud/conversion/) | [Source Code](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java) | [Blog](https://blog.groupdocs.cloud/category/conversion/) | [Free Support](https://forum.groupdocs.cloud/c/conversion) | [Free Trial](https://purchase.groupdocs.cloud/trial)
++ Java SE Development Kit 8
+
++ GroupDocs.Conversion Cloud SDK for Java.
+
++ Get your AppSID and AppKey at [https://dashboard.groupdocs.cloud](https://dashboard.groupdocs.cloud) (free registration is required).
+
+## How to Run the Examples
+
+The package contains Java examples. Follow the given steps to proceed with project build:
+
+*Extract the downloaded project
+*Open project in your IDE
+*Edit RunExamples.java and put appSid and appKey, obtained from https://dashboard.groupdocs.cloud there
+*Build and Run
+
+For more details, visit  [Getting Started](https://docs.groupdocs.cloud/display/conversioncloud/Getting+Started).
+
+## Licensing
+
+All GroupDocs.Conversion Cloud SDKs are licensed under [MIT License](LICENSE).
+
+## Resources
+
++ [**Website**](https://www.groupdocs.cloud)
++ [**Product Home**](https://products.groupdocs.cloud/conversion)
++ [**Documentation**](https://docs.groupdocs.cloud/conversion/)
++ [**Free Support Forum**](https://forum.groupdocs.cloud/c/conversion)
++ [**Blog**](https://blog.groupdocs.cloud/category/conversion)
+
+## Contact Us
+
+Your feedback is very important to us. Please feel free to contact us using our [Support Forums](https://forum.groupdocs.cloud/c/conversion).

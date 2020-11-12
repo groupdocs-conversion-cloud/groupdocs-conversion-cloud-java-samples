@@ -37,7 +37,8 @@ public class RunExamples {
 		ConvertToHtml.main(args);
 		ConvertToPresentation.main(args);
 		ConvertToSpreadsheet.main(args);
-
+		ConvertToPdfDirect.main(args);
+		
 		// Load Options By Document Type
 		ConvertCadAndSpecifyLoadOptions.main(args);
 
