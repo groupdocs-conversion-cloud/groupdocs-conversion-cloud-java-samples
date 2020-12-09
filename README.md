@@ -16,7 +16,7 @@ This repository contains [Examples](Examples) projects for [GroupDocs.Conversion
 
 + GroupDocs.Conversion Cloud SDK for Java.
 
-+ Get your AppSID and AppKey at [https://dashboard.groupdocs.cloud](https://dashboard.groupdocs.cloud) (free registration is required).
++ Get your ClientId and ClientSecret at [https://dashboard.groupdocs.cloud](https://dashboard.groupdocs.cloud) (free registration is required).
 
 ## How to Run the Examples
 
@@ -24,7 +24,7 @@ The package contains Java examples. Follow the given steps to proceed with proje
 
 *Extract the downloaded project
 *Open project in your IDE
-*Edit RunExamples.java and put appSid and appKey, obtained from https://dashboard.groupdocs.cloud there
+*Edit RunExamples.java and put ClientId and ClientSecret, obtained from https://dashboard.groupdocs.cloud there
 *Build and Run
 
 For more details, visit  [Getting Started](https://docs.groupdocs.cloud/display/conversioncloud/Getting+Started).
