@@ -29,6 +29,7 @@ public class RunExamples {
 		AddWatermark.main(args);
 		ConvertConsecutivePages.main(args);
 		ConvertSpecificPages.main(args);
+		ConvertUsingCustomFont.main(args);
 
 		// Conversion API examples
 		ConvertToWordProcessing.main(args);
