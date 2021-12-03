@@ -25,6 +25,9 @@ public class RunExamples {
 		GetSupportedConversions.main(args);
 		GetDocumentInformation.main(args);
 
+		// License API examples
+		GetMeteredConsumption.main(args);
+
 		// Common API examples
 		AddWatermark.main(args);
 		ConvertConsecutivePages.main(args);
