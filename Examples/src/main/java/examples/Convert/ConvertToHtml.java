@@ -22,7 +22,7 @@ public class ConvertToHtml {
 			settings.setFilePath("WordProcessing/four-pages.docx");
 			settings.setFormat("html");
 
-			HtmlConvertOptions convertOptions = new HtmlConvertOptions();
+			WebConvertOptions convertOptions = new WebConvertOptions();
 			convertOptions.setFromPage(1);
 			convertOptions.setPagesCount(1);
 			convertOptions.setFixedLayout(true);

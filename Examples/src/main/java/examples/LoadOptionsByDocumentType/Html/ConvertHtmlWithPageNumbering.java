@@ -22,7 +22,7 @@ public class ConvertHtmlWithPageNumbering {
 			settings.setFilePath("Html/sample.html");
 			settings.setFormat("pdf");
 
-			HtmlLoadOptions loadOptions = new HtmlLoadOptions();
+			WebLoadOptions loadOptions = new WebLoadOptions();
 			loadOptions.setPageNumbering(true);
 
 			settings.setLoadOptions(loadOptions);
