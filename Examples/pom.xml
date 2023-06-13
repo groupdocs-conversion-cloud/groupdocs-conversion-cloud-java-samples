@@ -14,7 +14,7 @@
 	<dependency>
     	<groupId>com.groupdocs</groupId>
     	<artifactId>groupdocs-conversion-cloud</artifactId>
-    	<version>23.4</version>
+    	<version>23.6</version>
     	<scope>compile</scope>
 	</dependency>
   </dependencies>
