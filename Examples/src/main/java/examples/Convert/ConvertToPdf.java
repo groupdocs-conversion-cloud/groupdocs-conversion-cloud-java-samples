@@ -31,7 +31,7 @@ public class ConvertToPdf {
 			convertOptions.setCenterWindow(true);
 			convertOptions.setCompressImages(false);
 			convertOptions.setDisplayDocTitle(true);
-			convertOptions.setDpi(1024.0);
+			convertOptions.setDpi(1024);
 			convertOptions.setFitWindow(false);
 			convertOptions.setFromPage(1);
 			convertOptions.setGrayscale(false);
