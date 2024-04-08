@@ -23,8 +23,7 @@ public class ConvertCadAndSpecifyLoadOptions {
 			settings.setFormat("pdf");
 
 			CadLoadOptions loadOptions = new CadLoadOptions();
-			loadOptions.setWidth(1920);
-			loadOptions.setHeight(1080);
+			loadOptions.setFormat("dwg");
 
 			settings.setLoadOptions(loadOptions);
 			settings.setOutputPath("converted");
