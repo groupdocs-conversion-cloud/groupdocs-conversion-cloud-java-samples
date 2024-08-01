@@ -2,6 +2,7 @@ package examples;
 
 import examples.Common.*;
 import examples.Convert.*;
+import examples.Convert.Async.*;
 import examples.Info.*;
 import examples.LoadOptionsByDocumentType.Cad.*;
 import examples.LoadOptionsByDocumentType.Csv.*;
@@ -82,6 +83,12 @@ public class RunExamples {
 		ConvertWordProcessingByHidingComments.main(args);
 		ConvertWordProcessingByHidingTrackedChanges.main(args);
 		ConvertWordProcessingBySpecifyingFontSubstitution.main(args);		
+
+
+		// Async API examples
+		ConvertToPdfAsync.main(args);		
+		ConvertToPdfDirectAsync.main(args);		
+
 
 		System.out.println("Completed");
 	}	

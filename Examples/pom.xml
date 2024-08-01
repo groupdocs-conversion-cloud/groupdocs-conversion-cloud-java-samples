@@ -7,14 +7,14 @@
     <repository>
 	    <id>groupdocs-artifact-repository</id>
 	    <name>GroupDocs Artifact Repository</name>
-	    <url>https://repository.groupdocs.cloud/repo</url>
+	    <url>https://releases.groupdocs.cloud/java/repo</url>
 	</repository>
 </repositories>
  <dependencies>  	
 	<dependency>
     	<groupId>com.groupdocs</groupId>
     	<artifactId>groupdocs-conversion-cloud</artifactId>
-    	<version>24.4</version>
+    	<version>24.8</version>
     	<scope>compile</scope>
 	</dependency>
   </dependencies>

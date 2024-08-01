@@ -26,7 +26,6 @@ public class ConvertEmailWithAlteringFieldsVisibility {
 			loadOptions.setDisplayHeader(true);
 			loadOptions.setDisplayFromEmailAddress(false);
 			loadOptions.setDisplayToEmailAddress(false);
-			loadOptions.setDisplayEmailAddress(false);
 			loadOptions.setDisplayCcEmailAddress(false);
 			loadOptions.setDisplayBccEmailAddress(false);
 
