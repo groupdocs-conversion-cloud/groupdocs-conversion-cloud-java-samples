@@ -2,6 +2,7 @@ package examples.LoadOptionsByDocumentType.Spreadsheet;
 
 import com.groupdocs.cloud.conversion.client.*;
 import com.groupdocs.cloud.conversion.model.*;
+import com.groupdocs.cloud.conversion.model.SpreadsheetLoadOptions.PrintCommentsEnum;
 import com.groupdocs.cloud.conversion.model.requests.*;
 import com.groupdocs.cloud.conversion.api.*;
 import examples.Constants;
@@ -23,7 +24,7 @@ public class ConvertSpreadsheetAndHideComments {
 			settings.setFormat("pdf");
 
 			SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-			loadOptions.setHideComments(true);
+			loadOptions.setPrintComments(PrintCommentsEnum.PRINTNOCOMMENTS);
 			loadOptions.setOnePagePerSheet(true);
 
 			settings.setLoadOptions(loadOptions);

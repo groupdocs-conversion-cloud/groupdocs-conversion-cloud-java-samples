@@ -2,6 +2,7 @@ package examples.LoadOptionsByDocumentType.Presentation;
 
 import com.groupdocs.cloud.conversion.client.*;
 import com.groupdocs.cloud.conversion.model.*;
+import com.groupdocs.cloud.conversion.model.PresentationLoadOptions.CommentsPositionEnum;
 import com.groupdocs.cloud.conversion.model.requests.*;
 import com.groupdocs.cloud.conversion.api.*;
 import examples.Constants;
@@ -23,7 +24,7 @@ public class ConvertPresentationByHidingComments {
 			settings.setFormat("pdf");
 
 			PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-			loadOptions.setHideComments(true);
+			loadOptions.setCommentsPosition(CommentsPositionEnum.NONE);
 
 			settings.setLoadOptions(loadOptions);
 			settings.setOutputPath("converted");
