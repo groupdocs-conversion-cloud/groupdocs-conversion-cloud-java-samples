@@ -2,6 +2,7 @@ package examples.LoadOptionsByDocumentType.WordProcessing;
 
 import com.groupdocs.cloud.conversion.client.*;
 import com.groupdocs.cloud.conversion.model.*;
+import com.groupdocs.cloud.conversion.model.WordProcessingLoadOptions.CommentDisplayModeEnum;
 import com.groupdocs.cloud.conversion.model.requests.*;
 import com.groupdocs.cloud.conversion.api.*;
 import examples.Constants;
@@ -23,7 +24,7 @@ public class ConvertWordProcessingByHidingComments {
 			settings.setFormat("pdf");
 
 			WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();			
-			loadOptions.setHideComments(true);
+			loadOptions.setCommentDisplayMode(CommentDisplayModeEnum.HIDDEN);
 
 			settings.setLoadOptions(loadOptions);
 			settings.setOutputPath("converted");
