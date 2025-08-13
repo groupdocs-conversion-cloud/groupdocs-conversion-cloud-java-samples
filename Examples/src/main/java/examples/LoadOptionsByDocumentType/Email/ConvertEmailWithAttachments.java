@@ -23,7 +23,7 @@ public class ConvertEmailWithAttachments {
 			settings.setFormat("pdf");
 
 			EmailLoadOptions loadOptions = new EmailLoadOptions();			
-			loadOptions.setConvertAttachments(true);
+			loadOptions.setDisplayAttachments(true);
 
 			settings.setLoadOptions(loadOptions);
 			settings.setOutputPath("converted");
