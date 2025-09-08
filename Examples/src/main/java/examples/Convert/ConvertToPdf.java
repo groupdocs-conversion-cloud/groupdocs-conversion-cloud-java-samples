@@ -22,7 +22,7 @@ public class ConvertToPdf {
 			settings.setFilePath("WordProcessing/password-protected.docx");
 			settings.setFormat("pdf");
 
-			DocxLoadOptions loadOptions = new DocxLoadOptions();
+			WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 			loadOptions.setPassword("password");
 
 			settings.setLoadOptions(loadOptions);

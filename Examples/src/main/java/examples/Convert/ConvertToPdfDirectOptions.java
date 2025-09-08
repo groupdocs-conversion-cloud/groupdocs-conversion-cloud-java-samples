@@ -18,7 +18,7 @@ public class ConvertToPdfDirectOptions {
 			ConvertApi apiInstance = new ConvertApi(Constants.GetConfiguration());
 
 			File file = new File("examples\\src\\main\\resources\\WordProcessing\\password-protected.docx");
-			DocxLoadOptions loadOptions = new DocxLoadOptions();
+			WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 			loadOptions.setFormat("docx");
 			loadOptions.setPassword("password");
 
