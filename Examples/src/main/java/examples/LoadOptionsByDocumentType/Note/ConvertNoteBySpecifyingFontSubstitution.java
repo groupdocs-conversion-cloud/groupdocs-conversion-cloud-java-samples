@@ -22,7 +22,7 @@ public class ConvertNoteBySpecifyingFontSubstitution {
 			settings.setFilePath("Note/sample.one");
 			settings.setFormat("pdf");
 
-			OneLoadOptions loadOptions = new OneLoadOptions();
+			NoteLoadOptions loadOptions = new NoteLoadOptions();
 			
 			Map<String, String> fontSubs = new HashMap<String, String>();
 			fontSubs.put("Tahoma", "Arial");
