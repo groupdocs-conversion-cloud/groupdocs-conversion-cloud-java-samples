@@ -22,7 +22,7 @@ public class ConvertToImage {
 			settings.setFilePath("WordProcessing/four-pages.docx");
 			settings.setFormat("jpg");
 
-			JpgConvertOptions convertOptions = new JpgConvertOptions();
+			ImageConvertOptions convertOptions = new ImageConvertOptions();
 			convertOptions.setFromPage(1);
 			convertOptions.setPagesCount(2);			
 

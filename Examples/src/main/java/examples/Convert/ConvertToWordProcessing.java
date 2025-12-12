@@ -29,7 +29,7 @@ public class ConvertToWordProcessing {
 			loadOptions.setFlattenAllFields(true);
 
 			settings.setLoadOptions(loadOptions);
-			settings.setConvertOptions(new DocxConvertOptions());
+			settings.setConvertOptions(new WordProcessingConvertOptions());
 			settings.setOutputPath("converted");
 
 			List<StoredConvertedResult> result = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
